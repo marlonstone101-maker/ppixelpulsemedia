@@ -22,7 +22,7 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    body {
+  body {
       background-color: var(--bg-dark);
       color: var(--text-main);
       line-height: 1.6;
@@ -335,6 +335,20 @@
       font-size: 0.9rem;
       margin-top: 4rem;
     }
+    @media (max-width: 768px) {
+  /* Hides text brand name if logo image already has text */
+  .logo-text {
+    display: none;
+  }
+  
+  header {
+    padding: 0.8rem 5%;
+  }
+
+  .logo-container img {
+    height: 40px;
+  }
+}
   </style>
 </head>
 <body>
