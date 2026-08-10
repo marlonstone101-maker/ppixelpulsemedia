@@ -29,19 +29,96 @@
     }
 
     /* Header & Navigation */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem 5%;
-      border-bottom: 1px solid var(--border-color);
-      position: sticky;
-      top: 0;
-      background-color: #000000;
-      backdrop-filter: blur(8px);
-      z-index: 100;
-    }
+   header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  background-color: #000000;
+  backdrop-filter: blur(8px);
+  z-index: 100;
+}
 
+.hero-section {
+  position: relative;
+  background: linear-gradient(rgba(10, 15, 25, 0.75), rgba(10, 15, 25, 0.85)), 
+              url('hero-bg.png') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+/* Keeps the text sharp over the detailed background */
+.hero-content h1, 
+.hero-content p {
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+/* About Section Styles */
+.about-section {
+  padding: 80px 0;
+  background-color: #0b0f19;
+  color: #e2e8f0;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .about-content {
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+  }
+}
+
+.about-lead {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #00f2fe;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.stat-card h3 {
+  font-size: 1.5rem;
+  color: #00f2fe;
+  margin-bottom: 5px;
+}
+
+.stat-card p {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin: 0;
+}
     .site-logo {
   height: 50px;
   width: auto;
@@ -275,12 +352,41 @@
   </header>
 
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero-section">
     <h1>High-Performance Websites <br>Built For Your Business</h1>
     <p>Custom, responsive web development engineered to elevate your brand presence.</p>
     <a href="#booking" class="btn btn-cyan">Start Your Project</a>
   </section>
-
+<!-- About Section -->
+<section id="about" class="about-section">
+  <div class="container">
+    <h2 class="section-title">About Us</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p class="about-lead">
+          We craft modern, high-performance web experiences designed to elevate your brand and turn visitors into loyal clients.
+        </p>
+        <p>
+          At Pixel Pulse Media, we specialize in custom web design, responsive frontend development, and seamless digital solutions. Whether you need a crisp landing page, a full site redesign, or tailored web functionality, we build every project with speed, style, and precision.
+        </p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card">
+          <h3>100%</h3>
+          <p>Custom Code</p>
+        </div>
+        <div class="stat-card">
+          <h3>Fast</h3>
+          <p>Load Times</p>
+        </div>
+        <div class="stat-card">
+          <h3>Mobile</h3>
+          <p>Responsive</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
   <div class="container">
     <!-- Portfolio Section -->
     <section id="portfolio">
