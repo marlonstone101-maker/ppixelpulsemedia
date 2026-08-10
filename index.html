@@ -335,18 +335,37 @@
       font-size: 0.9rem;
       margin-top: 4rem;
     }
-    @media (max-width: 768px) {
-  /* Hides text brand name if logo image already has text */
+  @media (max-width: 768px) {
   .logo-text {
     display: none;
   }
-  
+
   header {
-    padding: 0.8rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.2rem;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
   }
 
   .logo-container img {
-    height: 40px;
+    height: 52px;
+    width: auto;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+    white-space: nowrap;
   }
 }
   </style>
